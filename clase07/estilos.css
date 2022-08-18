@@ -1,0 +1,33 @@
+*{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    height: 100vh;
+}
+header{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+section.contenedor{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+.contador{
+    font-size: 60px;
+}
+.botones-contador button{
+    font-size: 40px;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 1rem;
+    border: none;
+}
+button.borroso{
+    background-color: darkgray;
+}
