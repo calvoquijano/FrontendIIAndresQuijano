@@ -1,0 +1,29 @@
+*{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+header{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-flow: row wrap;
+}
+article.columna-repaso{
+    background-color: antiquewhite;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    width: 30%;
+}
+article.columna-repaso:first-child{
+    background-color: beige;
+}
+article.columna-repaso:last-child{
+    background-color: bisque;
+}
