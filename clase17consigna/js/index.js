@@ -1,16 +1,20 @@
 // Aquí realizamos un la consulta de la promesa, esperando su respuesta asíncrona
-fetch("https://randomuser.me/api/")
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        //manipulamos la respuesta
-        renderizarDatosUsuario(data);
-    });
+fetchFunction();
 
 
 
 
+
+function fetchFunction() {
+    fetch("https://randomuser.me/api/")
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            //manipulamos la respuesta
+            renderizarDatosUsuario(data);
+        });
+}
 
 function renderizarDatosUsuario(data) {
     /* -------------------------------- CONSIGNA 1 -------------------------------- */
@@ -38,6 +42,6 @@ function renderizarDatosUsuario(data) {
 // Es criterio del equipo QUÉ bloque del código debe contenerse dentro de una función para poder ser ejecutada cada vez que se escuche un click.
 
 
-//No me funciona
-// const btnUsuarioRamdon = document.querySelector("#random");
-// btnUsuarioRamdon.addEventListener("click", renderizarDatosUsuario);
+//Funciona
+const btnUsuarioRamdon = document.querySelector("#random");
+btnUsuarioRamdon.addEventListener("click", fetchFunction);
