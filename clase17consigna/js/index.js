@@ -1,20 +1,22 @@
 // Aquí realizamos un la consulta de la promesa, esperando su respuesta asíncrona
 fetchFunction();
 
-
-
-
-
 function fetchFunction() {
     fetch("https://randomuser.me/api/")
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            //manipulamos la respuesta
-            renderizarDatosUsuario(data);
-        });
+    .then((response) => {
+        
+        return response.json();
+        
+    })
+    .then((data) => {
+        //manipulamos la respuesta
+        renderizarDatosUsuario(data);
+    })
+    .catch((error) => {
+        console.log(error)
+    });
 }
+
 
 function renderizarDatosUsuario(data) {
     /* -------------------------------- CONSIGNA 1 -------------------------------- */
